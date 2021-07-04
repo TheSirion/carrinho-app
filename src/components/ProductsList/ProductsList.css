@@ -1,0 +1,7 @@
+.products-list {
+  padding: 1.5rem;
+}
+
+.products-list:last-child {
+  margin-bottom: 0;
+}

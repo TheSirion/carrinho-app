@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ApiContextProvider from "./components/ApiContext/ApiContext";
+import ApiSwitcher from "./components/ApiSwitcher/ApiSwitcher";
+import Card from "./components/Card/Card";
+import CardFooter from "./components/CardFooter/CardFooter";
+import CardHeader from "./components/CardHeader/CardHeader";
+import ProductsList from "./components/ProductsList/ProductsList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApiContextProvider>
+      <main>
+        <Card>
+          <CardHeader>
+            <h1>Meu carrinho</h1>
+          </CardHeader>
+          <ProductsList />
+          <CardFooter />
+        </Card>
+      </main>
+      <ApiSwitcher />
+    </ApiContextProvider>
   );
 }
 

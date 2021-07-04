@@ -1,0 +1,29 @@
+.api-switcher {
+  padding: 1.5rem;
+  display:flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.api-switcher button {
+  font-family: Poppins, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background-color: #0072d9;
+  flex-basis: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.1s ease,
+              transform 0.1s ease;
+}
+
+.api-switcher button:hover {
+  background-color: #1e82da;
+}
+
+.api-switcher button:active {
+  background-color: rgb(12, 98, 211);
+  transform: scale(0.99);
+}
